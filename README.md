@@ -27,9 +27,8 @@ not omitted, because of missing data. Reasoning is that this will make life simp
 At end of the day it depends on case by case.
 
 # REST API suggestions
-`POST /datapoints` with requirements specified in assignment should 
-return `HTTP 2xx` in all cases instead of `HTTP 400` in case data are already present - idempotence. 
-In this case call has no content so it would be better use `HTTP 204`.
+`POST /datapoints` with requirements ASIS should 
+return `HTTP 2xx` in all cases instead of `HTTP 400` in case data are already present - idempotence.
 
 Taken from wiki `HTTP 400` is used for `The server cannot or will not process the request due to an apparent client error (e.g., malformed request syntax, size too large, invalid request message framing, or deceptive request routing).`
 But unique data condition is rather server error so better go for `HTTP 5xx` could be better or as mentioned before one of

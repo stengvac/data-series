@@ -37,12 +37,12 @@ class DataSeriesController(
         val stored = dataSeriesService.storeDatapoint(dataPoint)
 
         return if (stored) {
-            okResponseEntity
+            noContentResponseEntity
         } else badRequest
     }
 
     companion object {
-        private val okResponseEntity = ResponseEntity.ok().build<Unit>()
+        private val noContentResponseEntity = ResponseEntity.noContent().build<Unit>()
         private val badRequest = ResponseEntity.badRequest().build<Unit>()
 
         const val dataPointsEndpoint = "/datapoints"
