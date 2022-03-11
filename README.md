@@ -31,8 +31,8 @@ At end of the day it depends on case by case.
 return `HTTP 2xx` in all cases instead of `HTTP 400` in case data are already present - idempotence.
 
 Taken from wiki `HTTP 400` is used for `The server cannot or will not process the request due to an apparent client error (e.g., malformed request syntax, size too large, invalid request message framing, or deceptive request routing).`
-But unique data condition is rather server error so better go for `HTTP 5xx` could be better or as mentioned before one of
-`HTTP 2xx` statuses.
+But unique data condition is rather server error so better use `HTTP 5xx` or  as mentioned before one of
+`HTTP 2xx` statuses instead.
 
 
 About `GET` endpoints those does not follow restful approach. I would rather go for `/devices/{device}/statistics/avg`
